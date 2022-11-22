@@ -6,7 +6,6 @@ const config = require('../config');
 
 
 module.exports = {
-  extry: ['./src/main.js'],
   output: {
     filename: '[name].[hash:8].js',
     path: config.build.assetsRoot,

@@ -91,7 +91,6 @@ module.exports = merge(baseWeboackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       template:resolve('public/index.html'),
-      filename: 'index.html',
       title: 'vueconfig',
       scriptLoading: 'defer',
     })

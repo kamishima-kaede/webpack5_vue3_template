@@ -1,7 +1,7 @@
 'use strict';
 const path = require('path');
 
-const ASSETSPUBLICPATH = precess.env.PUBLICPATH || '/';
+const ASSETSPUBLICPATH = process.env.PUBLICPATH || '/';
 
 module.exports = {
   dev: {

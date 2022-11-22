@@ -8,7 +8,7 @@ const { resolve } = require('./utils');
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  extry: ['./src/main.js'],
+  entry: ['./src/main.js'],
   output: {
     filename: '[name].[hash:8].js',
     path: config.build.assetsRoot,
@@ -47,7 +47,7 @@ module.exports = {
             }
           }
         ],
-        includes: [resolve('src/icons')]
+        include: [resolve('src/icons')]
       }
     ]
   },
