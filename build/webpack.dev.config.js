@@ -86,13 +86,15 @@ module.exports = merge(baseWeboackConfig, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': require('../config/dev.env')
+      'process.env': require('../config/dev.env'),
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false
     }),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template:resolve('public/index.html'),
+      template: resolve('public/index.html'),
       title: 'vueconfig',
-      scriptLoading: 'defer',
+      scriptLoading: 'defer'
     })
   ]
 });

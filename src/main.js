@@ -1,6 +1,6 @@
-import { createApp } from 'vue';
-import '@/icons';
-import App from './App.vue';
+import { createApp } from 'vue'
+import '@/icons'
+import App from './App.vue'
 
-const app = createApp(App);
-app.mount('#root');
+const app = createApp(App)
+app.mount('#app')

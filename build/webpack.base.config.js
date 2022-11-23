@@ -10,9 +10,10 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: ['./src/main.js'],
   output: {
+    clean: true,
     filename: '[name].[hash:8].js',
     path: config.build.assetsRoot,
-    clean: true
+    publicPath: config.build.assetsPublicPath,
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -24,16 +25,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?jsx?$/,
-        resolve: { fullySpecified: false }
-      },
-      {
         test: /\.vue$/,
         use: [{ loader: 'vue-loader', options: vueLoaderConfig }]
       },
 
       {
-        test: /\.m?jsx?$/,
+        test: /\.m?js?$/,
         use: [{ loader: 'babel-loader' }],
         exclude: file => /node_modules/.test(file) && !/\.vue\.js/.test(file)
       },

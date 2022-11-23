@@ -1,7 +1,9 @@
 'use strict';
 const path = require('path');
 
-const ASSETSPUBLICPATH = process.env.PUBLICPATH || '/';
+const ASSETSPUBLICPATH = process.env.PUBLIC_PATH || '/';
+
+console.log('process.env.PUBLIC_PATH=', process.env.PUBLIC_PATH);
 
 module.exports = {
   dev: {
@@ -10,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     devtool: 'eval-cheap-module-source-map',
     cssSourceMap: true,
-    autoOpenBrowser: true,
+    autoOpenBrowser: false,
     proxyTable: []
   },
   build: {

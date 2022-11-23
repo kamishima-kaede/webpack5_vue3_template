@@ -7,7 +7,7 @@ const config = require('../config');
 
 module.exports = {
   output: {
-    filename: '[name].[hash:8].js',
+    filename: '[name].[fullhash:8].js',
     path: config.build.assetsRoot,
     clean: true
   },
